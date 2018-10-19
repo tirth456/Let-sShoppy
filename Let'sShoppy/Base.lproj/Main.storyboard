@@ -18,32 +18,99 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Let's Shoppy" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sPM-zV-PTj">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="55"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's Shoppy" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sPM-zV-PTj">
+                                <rect key="frame" x="0.0" y="18" width="375" height="55"/>
                                 <color key="backgroundColor" red="0.04309409111738205" green="0.98715609312057495" blue="0.95788782835006714" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="XL9-YY-XAv"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="XL9-YY-XAv"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="XL9-YY-XAv"/>
+                                    </mask>
+                                </variation>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zr5-sc-Kno">
-                                <rect key="frame" x="80" y="322" width="214" height="39"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zr5-sc-Kno">
+                                <rect key="frame" x="80.5" y="306" width="214" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="tqQ-qc-a3t"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <state key="normal" title="Today's Shopping List "/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="tqQ-qc-a3t"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="tqQ-qc-a3t"/>
+                                    </mask>
+                                </variation>
                                 <connections>
                                     <segue destination="jBn-Is-Eh7" kind="show" id="6hc-wp-Drq"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="sPM-zV-PTj" secondAttribute="trailing" id="3IL-fj-KQE"/>
+                            <constraint firstItem="sPM-zV-PTj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="4sB-0C-9FW"/>
+                            <constraint firstItem="Zr5-sc-Kno" firstAttribute="centerX" secondItem="sPM-zV-PTj" secondAttribute="centerX" id="UmE-bb-HGL"/>
+                            <constraint firstItem="Zr5-sc-Kno" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aCH-5L-EOK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Zr5-sc-Kno" secondAttribute="bottom" constant="154" id="gcS-YE-ZGg"/>
+                            <constraint firstItem="sPM-zV-PTj" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="nC5-mn-RXS">
+                                <variation key="heightClass=regular-widthClass=compact" constant="-2"/>
+                            </constraint>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Zr5-sc-Kno" secondAttribute="bottom" constant="306" id="sBr-Rv-4bF"/>
+                            <constraint firstItem="Zr5-sc-Kno" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="sMb-ow-1Mq"/>
+                            <constraint firstItem="sPM-zV-PTj" firstAttribute="centerX" secondItem="Zr5-sc-Kno" secondAttribute="centerX" id="t6N-sA-9UN"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="gcS-YE-ZGg"/>
+                                <exclude reference="sBr-Rv-4bF"/>
+                                <exclude reference="3IL-fj-KQE"/>
+                                <exclude reference="4sB-0C-9FW"/>
+                                <exclude reference="nC5-mn-RXS"/>
+                                <exclude reference="t6N-sA-9UN"/>
+                                <exclude reference="UmE-bb-HGL"/>
+                                <exclude reference="aCH-5L-EOK"/>
+                                <exclude reference="sMb-ow-1Mq"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="gcS-YE-ZGg"/>
+                                <include reference="UmE-bb-HGL"/>
+                                <include reference="aCH-5L-EOK"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="sBr-Rv-4bF"/>
+                                <include reference="3IL-fj-KQE"/>
+                                <include reference="4sB-0C-9FW"/>
+                                <include reference="nC5-mn-RXS"/>
+                                <include reference="t6N-sA-9UN"/>
+                                <include reference="sMb-ow-1Mq"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="135.19999999999999" y="131.78410794602701"/>
+            <point key="canvasLocation" x="133.59999999999999" y="129.98500749625188"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="BDe-fM-ahQ">
